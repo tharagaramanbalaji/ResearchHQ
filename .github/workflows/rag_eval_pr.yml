@@ -29,6 +29,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # ── Build a minimal corpus from web URLs (no PDF downloads needed) ──────
+      # This ingests the web_urls_enterprise.txt URLs into documents.jsonl,
+      # then chunks them into chunks.jsonl so the indexer has something to work with.
+      - name: Seed Corpus from Web URLs
+        run: |
+          python scripts/corpus/ingest_documents.py \
+            --data-dir data/llm_ai_2023_2026 \
+            --web-urls-file data/llm_ai_2023_2026/raw/web_urls_enterprise.txt
+          python scripts/corpus/chunk_corpus.py \
+            --data-dir data/llm_ai_2023_2026
+
       - name: Index ChromaDB
         run: |
           python scripts/corpus/index_chroma.py --data-dir data/llm_ai_2023_2026
@@ -43,12 +54,17 @@ jobs:
             --min-faithfulness 0.80 \
             --min-answer-relevancy 0.75
 
+      # Only comment if ragas_summary.json was actually written (eval ran successfully)
       - name: Comment Results on Pull Request
         if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/comment_pr_summary.py
+          if [ -f "data/evaluation/ragas_summary.json" ]; then
+            python scripts/comment_pr_summary.py
+          else
+            echo "Skipping PR comment — ragas_summary.json not found (eval did not complete)."
+          fi
 
       - name: Upload Evaluation Artifacts
         if: always()
