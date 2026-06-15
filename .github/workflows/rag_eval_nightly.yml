@@ -1,0 +1,54 @@
+name: Nightly Full RAG Evaluation
+
+on:
+  schedule:
+    # Run at 02:00 UTC every day
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  full-eval:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Index ChromaDB
+        run: |
+          python scripts/corpus/index_chroma.py --data-dir data/llm_ai_2023_2026
+
+      - name: Run RAG Evaluation Gate (Full 150 Test)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/run_eval_ci.py \
+            --limit 0 \
+            --min-evaluated 100 \
+            --min-faithfulness 0.80 \
+            --min-answer-relevancy 0.75
+
+      - name: Upload Evaluation Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rag-eval-full-results
+          path: |
+            data/evaluation/ragas_results.csv
+            data/evaluation/ragas_summary.json
+            data/evaluation/*.log
+          if-no-files-found: ignore
