@@ -4,14 +4,19 @@ __pycache__/
 *.pyc
 
 # Ignore large generated data by default
-data/
+data/*
 
-# BUT commit the static QA evaluation dataset (used by CI on every PR)
+# Allow the subdirectories we want to go into
 !data/evaluation/
-!data/evaluation/qa_dataset.json
-
-# Also commit web URLs list (used by corpus expansion scripts)
 !data/llm_ai_2023_2026/
+
+# Within those directories, ignore everything by default
+data/evaluation/*
+data/llm_ai_2023_2026/*
+
+# But allow the specific files and subdirectories
+!data/evaluation/qa_dataset.json
 !data/llm_ai_2023_2026/raw/
+data/llm_ai_2023_2026/raw/*
 !data/llm_ai_2023_2026/raw/web_urls_enterprise.txt
 
