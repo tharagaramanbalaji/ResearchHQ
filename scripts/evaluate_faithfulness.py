@@ -20,6 +20,12 @@ import time
 from pathlib import Path
 from unittest.mock import MagicMock
 
+# Force UTF-8 encoding for standard streams to prevent UnicodeEncodeError on Windows console
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 # Workaround for Ragas 0.4.3 ModuleNotFoundError: No module named
 # 'langchain_community.chat_models.vertexai'
 mock_module = MagicMock()

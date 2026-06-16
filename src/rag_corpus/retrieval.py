@@ -292,7 +292,7 @@ def load_prompt_config() -> dict:
 
 # Max characters per context passage sent to the LLM.
 # Keeps the prompt tight so the model focuses on the most relevant text.
-MAX_CTX_CHARS = 800
+MAX_CTX_CHARS = 8000
 
 
 def format_context_prompt(query: str, retrieved_contexts: list[dict]) -> str:
@@ -339,9 +339,13 @@ def extract_grounding_candidates(text: str) -> set[str]:
     Extract key factual candidates (Proper Nouns, Acronyms, and Multi-digit Numbers) 
     from the text that must be grounded in the context.
     """
+    # Strip citation patterns like [1], [12], [1-3], [1, 2] to prevent citation numbers from being treated as candidates
+    clean_text = re.sub(r"\[\d+(?:\s*,\s*\d+)*\]", " ", text)
+    clean_text = re.sub(r"\[\d+\s*-\s*\d+\]", " ", clean_text)
+
     candidates = set()
     # Split text into sentences using simple punctuation split
-    sentences = re.split(r"[.!?]\s+", text)
+    sentences = re.split(r"[.!?]\s+", clean_text)
     
     for sentence in sentences:
         sentence = sentence.strip()
@@ -362,12 +366,15 @@ def extract_grounding_candidates(text: str) -> set[str]:
                 
             # Check if it is capitalized (Proper Noun or Acronym)
             if word and word[0].isupper():
-                # If it's the first word of the sentence, ignore if it is in the common start words
-                if idx == 0 and word.lower() in SENTENCE_START_WORDS:
-                    continue
+                # If it's the first word of the sentence, ignore unless it is all-caps or mixed-case (e.g. system/acronym name)
+                if idx == 0:
+                    is_special_case = word.isupper() or any(c.isupper() for c in word[1:])
+                    if not is_special_case:
+                        continue
                 candidates.add(word.lower())
                 
     return candidates
+
 
 
 def is_candidate_grounded(candidate: str, context_words: set[str]) -> bool:
@@ -395,6 +402,11 @@ def is_candidate_grounded(candidate: str, context_words: set[str]) -> bool:
         if len(candidate) >= 4 and len(cw) >= 4:
             if candidate.startswith(cw) or cw.startswith(candidate):
                 return True
+                
+    # 5. Substring match (e.g. "giou" in "lgiou")
+    for cw in context_words:
+        if len(candidate) >= 3 and candidate in cw:
+            return True
                 
     return False
 

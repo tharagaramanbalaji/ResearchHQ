@@ -86,7 +86,7 @@ def query_rag(req: QueryRequest):
             
         docs = get_cached_documents(req.data_dir)
         
-        fetch_k = req.pool_size if req.re_rank else req.k
+        fetch_k = req.pool_size if (req.re_rank or req.mode == "hybrid") else req.k
         candidates = []
         
         # 1. Vector Search
@@ -118,7 +118,7 @@ def query_rag(req: QueryRequest):
         elif req.mode == "hybrid":
             if not req.re_rank:
                 # Direct RRF
-                candidates = reciprocal_rank_fusion(vector_chunks[:req.k], bm25_chunks[:req.k], rrf_k=req.rrf_k)
+                candidates = reciprocal_rank_fusion(vector_chunks, bm25_chunks, rrf_k=req.rrf_k)
             else:
                 # Merge & deduplicate to create a pool for reranking
                 merged = {}
