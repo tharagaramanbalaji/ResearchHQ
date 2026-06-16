@@ -32,13 +32,13 @@ jobs:
       # ── Build a minimal corpus from web URLs (no PDF downloads needed) ──────
       # This ingests the web_urls_enterprise.txt URLs into documents.jsonl,
       # then chunks them into chunks.jsonl so the indexer has something to work with.
-      - name: Seed Corpus from Web URLs
+      - name: Seed Corpus from Web URLs (Dry Run / Pipeline Test)
         run: |
           python scripts/corpus/ingest_documents.py \
-            --data-dir data/llm_ai_2023_2026 \
+            --data-dir data/smoke_test_temp \
             --web-urls-file data/llm_ai_2023_2026/raw/web_urls_enterprise.txt
           python scripts/corpus/chunk_corpus.py \
-            --data-dir data/llm_ai_2023_2026
+            --data-dir data/smoke_test_temp
 
       - name: Index ChromaDB
         run: |

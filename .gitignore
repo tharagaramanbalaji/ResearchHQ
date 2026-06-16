@@ -19,4 +19,9 @@ data/llm_ai_2023_2026/*
 !data/llm_ai_2023_2026/raw/
 data/llm_ai_2023_2026/raw/*
 !data/llm_ai_2023_2026/raw/web_urls_enterprise.txt
+!data/llm_ai_2023_2026/processed/
+data/llm_ai_2023_2026/processed/*
+!data/llm_ai_2023_2026/processed/documents.jsonl
+!data/llm_ai_2023_2026/processed/chunks.jsonl
+
 
