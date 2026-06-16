@@ -1,0 +1,1352 @@
+[
+  {
+    "id": 1,
+    "arxiv_id": "2606.04691",
+    "title": "1School of Software Engineering, South China University of Technology, Guangzhou, China",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What mechanisms does the Adaptive Mode Selector use to handle challenges within the Type-Centric Extraction Mode and the JERE task?",
+    "answer": "Within the Type-Centric Extraction Mode, the system employs an Evidence-Driven Debate module to provide structured conflict adjudication for cross-type conflicts. For the JERE task, an Iterative Entity–Relation Alignment step is used to ensure ontology consistency between entity and relation predictions."
+  },
+  {
+    "id": 2,
+    "arxiv_id": "2606.04691",
+    "title": "1School of Software Engineering, South China University of Technology, Guangzhou, China",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the trace of the REDFM NER sample 334, how is the conflict regarding the entity 'Panoramio' resolved?",
+    "answer": "A conflict was detected between the organization and media types after the Review Agent recovered the label 'media'. A binary debate was launched, starting with an initial qualifier gap of 0.084. Over two rounds, the gap widened to 0.275, leading to a convergence where 'media' was determined to be the winner, matching the Gold standard."
+  },
+  {
+    "id": 3,
+    "arxiv_id": "2606.04691",
+    "title": "1School of Software Engineering, South China University of Technology, Guangzhou, China",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the performance of the proposed method compare to CrossAgentIE regarding the classification of 'Panoramio' in the provided REDFM sample?",
+    "answer": "The proposed method successfully identified 'Panoramio' as 'media' through a debate process after recovering it via the Review Agent. In contrast, CrossAgentIE incorrectly committed to 'organization' because no conflict was raised, as the media agent remained silent on that span, leading to an off-gold prediction."
+  },
+  {
+    "id": 4,
+    "arxiv_id": "2606.04695",
+    "title": "one-dimensional exception is not an accident: the order of the real line",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the computational complexity of computing the cumulative-overlap formula for two sorted chains of lengths m and n?",
+    "answer": "The cumulative-overlap formula is computed by a two-pointer sweep in O(m+n) couplings. Additionally, the vector cost evaluation depends on the matrix M; for a dense matrix, it is O(d^2), while for a diagonal matrix or the identity matrix, it is O(d)."
+  },
+  {
+    "id": 5,
+    "arxiv_id": "2606.04695",
+    "title": "one-dimensional exception is not an accident: the order of the real line",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the provided text, how does the tractability of cone-compatible OT differ from sliced Wasserstein and tree Wasserstein methods?",
+    "answer": "Unlike sliced Wasserstein, which achieves scalability by averaging one-dimensional projected Wasserstein distances, or tree Wasserstein, which uses a tree metric on the ground space, cone-compatible OT achieves tractability by utilizing original-space monotone order. It identifies this order as a unique source of tractability, making it most useful when data possess a meaningful direction or progression structure."
+  },
+  {
+    "id": 6,
+    "arxiv_id": "2606.04695",
+    "title": "one-dimensional exception is not an accident: the order of the real line",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the probability of two-way comparability for the cone K = R^d+ based on the solid-angle limitation analysis?",
+    "answer": "For K = R^d+, the two-way comparability probability is calculated as 2 * Ω(K). Since the 2^d orthants have equal spherical measure, Ω(K) = 2^-d, which results in a two-way comparability probability of 2^(1-d)."
+  },
+  {
+    "id": 7,
+    "arxiv_id": "2606.04699",
+    "title": "Dept. of Computer Science and Engineering, IIT Ropar, Punjab 140001, India",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the specific technical improvements that IGEPSVM offers over the original GEPSVM for AD versus CN classification?",
+    "answer": "IGEPSVM improves upon GEPSVM by replacing the original ratio-based objective function with a difference-based standard eigenvalue formulation. This change is implemented to enhance numerical stability during the construction of the two non-parallel proximal hyperplanes. Additionally, the approach allows for independent control over class-wise contributions."
+  },
+  {
+    "id": 8,
+    "arxiv_id": "2606.04699",
+    "title": "Dept. of Computer Science and Engineering, IIT Ropar, Punjab 140001, India",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How is the ADNI dataset partitioned for the experiments, and how many subjects are utilized as Universum data?",
+    "answer": "The dataset is partitioned into 70% for training and 30% for testing. Within the 1,017 total subjects used for AD versus CN classification, there are 788 cognitively normal (CN) subjects and 229 Alzheimer's disease (AD) subjects. Furthermore, 391 mild cognitive impairment (MCI) subjects are incorporated as Universum data to provide intermediate structural information."
+  },
+  {
+    "id": 9,
+    "arxiv_id": "2606.04699",
+    "title": "Dept. of Computer Science and Engineering, IIT Ropar, Punjab 140001, India",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What does the sensitivity analysis of the UG-GEPSVM model reveal regarding its performance and hyperparameter tuning?",
+    "answer": "The sensitivity analysis indicates that the performance of UG-GEPSVM is relatively stable across hyperparameter values, even when noise is introduced. A broad high-performance plateau is observed, suggesting that the model does not require highly precise parameter tuning to achieve competitive results. This stability is maintained across both 0% and 10% noise conditions."
+  },
+  {
+    "id": 10,
+    "arxiv_id": "2606.04703",
+    "title": "1Gaoling School of Artificial Intelligence, Renmin University of China",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Why does the paper argue that off-policy context-distillation is superior to on-policy context-distillation for experience internalization?",
+    "answer": "The paper finds that while on-policy context-distillation provides strong gains in a single iteration, it fails to sustain them over multiple iterations because the teacher is limited to local corrections on flawed, student-induced trajectories. In contrast, off-policy context-distillation trains on high-quality, teacher-generated trajectories, which provides a more stable signal for experience internalization and supports long-term self-evolution."
+  },
+  {
+    "id": 11,
+    "arxiv_id": "2606.04703",
+    "title": "1Gaoling School of Artificial Intelligence, Renmin University of China",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the primary technical disadvantage of using 'global injection' compared to 'step-wise injection' for LLM agents?",
+    "answer": "Global injection provides the teacher with the same fixed experience context throughout the entire trajectory, which can cause a misalignment between the injected experience and the current decision state. This leads to issues such as premature answer generation instead of continued tool use, as experience relevant to later stages may be exposed too early while current needs remain unaddressed."
+  },
+  {
+    "id": 12,
+    "arxiv_id": "2606.04703",
+    "title": "1Gaoling School of Artificial Intelligence, Renmin University of China",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which specific language models were used in the experimental comparison of off-policy versus on-policy context-distillation?",
+    "answer": "The researchers compared off-policy and on-policy context-distillation using the Qwen3-4B-Instruct-2507 and Qwen3-8B models. These experiments were conducted to evaluate how different injection methods affect the model's ability to internalize experience."
+  },
+  {
+    "id": 13,
+    "arxiv_id": "2606.04705",
+    "title": "1School of Computer Engineering, Iran University of Science and Technology (IUST), Tehran, Iran",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How is the Box Predictor integrated into the MedSAM training pipeline?",
+    "answer": "The Box Predictor is integrated through a two-stage training pipeline. First, it is trained independently, and then it is integrated as fixed spatial guidance while MedSAM’s Prompt Encoder and Mask Decoder are optionally fine-tuned."
+  },
+  {
+    "id": 14,
+    "arxiv_id": "2606.04705",
+    "title": "1School of Computer Engineering, Iran University of Science and Technology (IUST), Tehran, Iran",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which specific medical imaging datasets were utilized to evaluate the proposed segmentation method?",
+    "answer": "The proposed method was evaluated using four heterogeneous medical imaging datasets. These datasets include BRISC, FLARE22, LungSegDB, and BUSI, which encompass various imaging modalities like MRI, CT, and Ultrasound."
+  },
+  {
+    "id": 15,
+    "arxiv_id": "2606.04705",
+    "title": "1School of Computer Engineering, Iran University of Science and Technology (IUST), Tehran, Iran",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What outcome was observed in the BRISC brain MRI sample when the Box Predictor was applied to a very small lesion?",
+    "answer": "In the BRISC brain MRI sample, the Box Predictor failed to improve upon the point-only baseline for a very small lesion. Because the Box Predictor overestimated the spatial extent of the target, it led to a degraded segmentation result with a Dice score of 0.123 compared to 0.856 for MedSAM with only a point prompt."
+  },
+  {
+    "id": 16,
+    "arxiv_id": "2606.04708",
+    "title": "1Institute of AI (TeleAI), China Telecom,2Lumos Robotics,3University of Science and Technology of",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the two specific bottlenecks identified by the researchers that complicate the adaptation of VLA models to UMI data?",
+    "answer": "The researchers identified a 'Visual Grounding mismatch' between wrist-mounted fisheye observations and standard-perspective VLM pretraining domains. Additionally, they identified a 'Physical-Plausibility mismatch' between human-collected trajectories and the constraints of target-robot embodiments."
+  },
+  {
+    "id": 17,
+    "arxiv_id": "2606.04708",
+    "title": "1Institute of AI (TeleAI), China Telecom,2Lumos Robotics,3University of Science and Technology of",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the real-robot success rate data in Table 3, how does the π0.5 + UMI-VQA approach compare to the π0.5 + Standard-view VQA approach in terms of overall performance?",
+    "answer": "The π0.5 + UMI-VQA approach achieved an overall success rate of 55.0% (33/60), significantly outperforming the π0.5 + Standard-view VQA approach, which achieved an overall success rate of 31.7% (19/60). This suggests that UMI-VQA provides more effective auxiliary supervision for policy learning under the UMI observation regime."
+  },
+  {
+    "id": 18,
+    "arxiv_id": "2606.04708",
+    "title": "1Institute of AI (TeleAI), China Telecom,2Lumos Robotics,3University of Science and Technology of",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How are the UMI-VQA datasets constructed according to the appendix information provided?",
+    "answer": "UMI-VQA is constructed from two primary sources: real-world UMI wrist-fisheye observations and a RefSpatial-based spatial-diversity supplement. The real-world observations provide authentic gripper-centric fisheye views from manipulation demonstrations, while the supplement is used to increase the diversity of scene layouts and spatial relations within fisheye-style views."
+  },
+  {
+    "id": 19,
+    "arxiv_id": "2606.04718",
+    "title": "Fig. 1: We proposeCoRe-MoEenables smooth, natural, and continuous transitions between walking and running using a single unified",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What issue does the CoRe-MoE framework aim to solve regarding standard Mixture-of-Experts (MoE) architectures in humanoid locomotion?",
+    "answer": "In standard MoE architectures, experts often fail to develop clear specialization, with their activation patterns becoming dispersed and overlapping across different terrains or gait conditions. This lack of specialization prevents the policy from fully utilizing the MoE structure, which limits both gait control precision and multi-terrain adaptability."
+  },
+  {
+    "id": 20,
+    "arxiv_id": "2606.04718",
+    "title": "Fig. 1: We proposeCoRe-MoEenables smooth, natural, and continuous transitions between walking and running using a single unified",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How is the curriculum learning strategy structured in the CoRe-MoE training process?",
+    "answer": "The environment is divided into 10 levels, and the curriculum level increases dynamically based on the velocity reward achieved by the policy. Higher curriculum levels correspond to both larger commanded target velocities and progressively more challenging terrain types, which guides the policy to learn robust locomotion in a structured manner."
+  },
+  {
+    "id": 21,
+    "arxiv_id": "2606.04718",
+    "title": "Fig. 1: We proposeCoRe-MoEenables smooth, natural, and continuous transitions between walking and running using a single unified",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specific capability did the CoRe-MoE framework demonstrate during real-world impact disturbance tests?",
+    "answer": "During level-ground locomotion, the robot was subjected to a sudden external impact while running. Despite the high-speed motion, the robot maintained its balance and quickly recovered stable locomotion, demonstrating strong stability and recovery capability under external perturbations."
+  },
+  {
+    "id": 22,
+    "arxiv_id": "2606.04719",
+    "title": "1Korea Advanced Institute of Science and Technology / Korea, Republic of",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What architectural design components allow the proposed model to connect a pre-trained vision encoder to a Mamba-based LLM?",
+    "answer": "The proposed architecture utilizes learnable queries, inspired by the Querying Transformer (Q-Former), to project visual information from image features into 1D causal tokens. This is achieved by interleaving a Mamba sequence modeling layer with cross-modal attention."
+  },
+  {
+    "id": 23,
+    "arxiv_id": "2606.04719",
+    "title": "1Korea Advanced Institute of Science and Technology / Korea, Republic of",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the provided benchmark data, how does the inference speed of the 'Ours' model with a query length of 128 compare to the Cobra model?",
+    "answer": "The 'Ours' model with a query length of 128 achieves an inference speed of 0.095 seconds per iteration. In comparison, the Cobra model has an inference speed of 0.129 seconds per iteration. Therefore, the 'Ours' model is faster than the Cobra model under these conditions."
+  },
+  {
+    "id": 24,
+    "arxiv_id": "2606.04719",
+    "title": "1Korea Advanced Institute of Science and Technology / Korea, Republic of",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specific ViT configuration and input image settings are utilized in the methodology described?",
+    "answer": "The methodology utilizes a ViT structure that contains 400 million parameters. Additionally, the input image resolution for this model is configured at 384x384, and the total number of visual features is 729."
+  },
+  {
+    "id": 25,
+    "arxiv_id": "2606.04730",
+    "title": "Fabian Retkowski1, Seymanur Akti1, Jan Niehues1, Alexander Waibel1,2",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What filtering steps were applied to the YTSeg dataset, and what was the final number of examples retained?",
+    "answer": "To prepare YTSeg, the authors first retained videos up to 15 minutes, which reduced the dataset from 16,404 to 10,729 examples. They then filtered out videos where Whisper Large achieved a word error rate (WER) of 50% or greater to remove noisy examples. This resulted in a final set of 10,638 examples."
+  },
+  {
+    "id": 26,
+    "arxiv_id": "2606.04730",
+    "title": "Fabian Retkowski1, Seymanur Akti1, Jan Niehues1, Alexander Waibel1,2",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How do the 'Sequential' and 'Round-Robin' pairwise methods differ in their impact on positional bias?",
+    "answer": "The Sequential method exhibits a strong A-bias, averaging +35.3 percentage points, because the greedy candidate always starts as the champion and occupies the first position. In contrast, the Round-Robin method nearly eliminates this bias, resulting in only +3.2 percentage points, because every candidate pair is compared once in each order."
+  },
+  {
+    "id": 27,
+    "arxiv_id": "2606.04730",
+    "title": "Fabian Retkowski1, Seymanur Akti1, Jan Niehues1, Alexander Waibel1,2",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the analysis of re-ranking methods, which language shows consistent improvements, and what is the primary driver of this gain?",
+    "answer": "Re-ranking yields consistent improvements only for English. The Likelihood method achieves the largest gain for this language. This improvement is driven primarily by strong results on the ASR task."
+  },
+  {
+    "id": 28,
+    "arxiv_id": "2606.04733",
+    "title": "Understanding activities of Internet scanners is challenging; it often requires identi-",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the approach in this paper differ from standard transformer-based models for network traffic analysis regarding positive pair generation?",
+    "answer": "Standard approaches commonly generate positive pairs through data augmentation techniques and evaluate representations based on supervised classification performance. In contrast, this work defines positive pairs as different subsequences originating from the same source. This allows the model to leverage naturally occurring consistency rather than relying on synthetic augmentations."
+  },
+  {
+    "id": 29,
+    "arxiv_id": "2606.04733",
+    "title": "Understanding activities of Internet scanners is challenging; it often requires identi-",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Why is a similarity offset δ introduced when calculating the cost q{j,k} in the correlation clustering problem?",
+    "answer": "Raw cosine similarities between learned embeddings are predominantly positive, which is insufficient to induce meaningful partitions or exclude trivial solutions. By introducing the similarity offset δ, the cosine similarity is shifted by a constant value. This effectively adjusts the threshold used to separate similar pairs from dissimilar ones within the clustering process."
+  },
+  {
+    "id": 30,
+    "arxiv_id": "2606.04733",
+    "title": "Understanding activities of Internet scanners is challenging; it often requires identi-",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the mathematical definition used to encode a partition Π of a set of sequences J?",
+    "answer": "Any partition Π is encoded by a vector y from the set of all possible encoding vectors YJ. The vector maps a pair of distinct sequences to 1 if and only if they are in distinct clusters. This is formally expressed as y{j,k} = 1 if for all clusters U in the partition, the pair {j,k} is not a subset of U."
+  },
+  {
+    "id": 31,
+    "arxiv_id": "2606.04739",
+    "title": "1Institute for Secure Networked Systems, Esslingen University, Esslingen, Germany",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What primary change was made to the Vul-RAG framework in this study to facilitate reproducible experimentation?",
+    "answer": "The authors adapted the Vul-RAG framework to operate entirely with open-weight models and local inference. This change was implemented to remove the dependency on proprietary APIs, which had been a concern for security-critical domains."
+  },
+  {
+    "id": 32,
+    "arxiv_id": "2606.04739",
+    "title": "1Institute for Secure Networked Systems, Esslingen University, Esslingen, Germany",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the Vul-RAG framework handle cases where models fail to process input data due to GPU memory constraints?",
+    "answer": "The Vul-RAG framework excludes items that the model fails to process from the evaluation. This exclusion is noted, for instance, with DeepSeek-Coder-V2-Instruct, where the quadratic scaling of the self-attention mechanism led to incomplete processing and subsequent exclusion of those failed items."
+  },
+  {
+    "id": 33,
+    "arxiv_id": "2606.04739",
+    "title": "1Institute for Secure Networked Systems, Esslingen University, Esslingen, Germany",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Why is data leakage identified as a threat to the validity of the study regarding the PairVul dataset?",
+    "answer": "The PairVul dataset was published on GitHub in April 2024, but several models evaluated in the study were released or updated after this date. Because these models may have been trained on data including the evaluation samples, the researchers cannot rule out the possibility that the models memorized the correct answers rather than performing genuine vulnerability detection."
+  },
+  {
+    "id": 34,
+    "arxiv_id": "2606.04743",
+    "title": "TIDE: Proactive Multi-Problem Discovery via Template-Guided Iteration",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How do thought templates function to improve an agent's problem-solving capabilities according to the introduction?",
+    "answer": "Thought templates are reusable schemas distilled from previously solved cases that capture recognizable patterns of hidden problems. They provide a reusable prior on how problems manifest in evidence, which sharpens each prediction by anchoring it in a known problem class rather than requiring the agent to infer it from scratch."
+  },
+  {
+    "id": 35,
+    "arxiv_id": "2606.04743",
+    "title": "TIDE: Proactive Multi-Problem Discovery via Template-Guided Iteration",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the fundamental difference between the proactive agent setting targeted by TIDE and the task-oriented settings described in the related work?",
+    "answer": "Task-oriented environments typically assume that a task has already been specified through a user request, issue description, or failing test, limiting the agent to executing against a stated objective. In contrast, TIDE targets an inverse setting where no explicit request exists, requiring the agent to first discover multiple, coexisting problems from a broader context before acting on them."
+  },
+  {
+    "id": 36,
+    "arxiv_id": "2606.04743",
+    "title": "TIDE: Proactive Multi-Problem Discovery via Template-Guided Iteration",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specific coordination failure does the SINGLE-AGENT approach exhibit when addressing the McNemar layout bug, and how does TIDE resolve it?",
+    "answer": "The SINGLE-AGENT approach retrieves paired constructors as separate bottlenecks, treating the bugs as unrelated and failing to surface the shared cross-function pattern. TIDE resolves this by retrieving both functions inside a single bottleneck and framing them as a coupled fix, emitting a coordinated patch that correctly swaps assignments in both functions to match the documented layout."
+  },
+  {
+    "id": 37,
+    "arxiv_id": "2606.04749",
+    "title": "Guopeng Li1,3, Moritz A. Zanger2, Matthijs T. J. Spaan2, Julian F. P. Kooij1",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the two primary weaknesses identified in existing methods when handling reward and safety Q-values that are negatively correlated?",
+    "answer": "Existing methods that learn Q-values independently produce overly conservative estimates, leading to low sample efficiency. Conversely, methods that scalarize objectives before handling uncertainty fail to guarantee safety conservatism, potentially overestimating safety and inducing unsafe behaviors."
+  },
+  {
+    "id": 38,
+    "arxiv_id": "2606.04749",
+    "title": "Guopeng Li1,3, Moritz A. Zanger2, Matthijs T. J. Spaan2, Julian F. P. Kooij1",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the 'Safe Navigation' experiment (T.3), why is the task considered particularly sensitive to Q-value estimation bias?",
+    "answer": "The Safe Navigation task is sensitive to Q-value estimation bias because it combines two types of signals that are both sparse: safety costs and goal-reaching rewards. This specific combination makes the task particularly challenging for accurate estimation."
+  },
+  {
+    "id": 39,
+    "arxiv_id": "2606.04749",
+    "title": "Guopeng Li1,3, Moritz A. Zanger2, Matthijs T. J. Spaan2, Julian F. P. Kooij1",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What limitation of COP-Q was revealed by the ablation study on the hopper and humanoid tasks?",
+    "answer": "The study showed that COP-Q does not offer a safety performance advantage over the independent double-Q baseline in this setting. The training curves were particularly unstable, which the authors attributed to the covariance matrix becoming ill-conditioned when safety signals are binary, sparse, and nearly homogeneous."
+  },
+  {
+    "id": 40,
+    "arxiv_id": "2606.04751",
+    "title": "Evaluating Inductive Reasoning in LLMs with Rule Discovery Games",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the three main contributions or evaluation findings claimed by the authors regarding the reasoning models used in this study?",
+    "answer": "The authors first operationalize scientific reasoning through hypothesis-driven reasoning grounded in semantic taxonomies to control for hypotheses. Second, they evaluate 12 LLMs across various scales and families, finding that reasoning models generally outperform instruction-tuned models, though none reach optimal performance. Finally, they perform a turn-level analysis that identifies consistent patterns in how models fail to navigate the hypothesis space."
+  },
+  {
+    "id": 41,
+    "arxiv_id": "2606.04751",
+    "title": "Evaluating Inductive Reasoning in LLMs with Rule Discovery Games",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What does the turn-level analysis reveal about the relationship between 'animal' and 'artifact' game categories regarding model performance and efficiency?",
+    "answer": "The analysis shows that turn efficiency generally mirrored success rates. Reasoning models solved animal games the fastest. In contrast, artifact games either took the most turns to solve or remained unsolved within the turn limit, particularly for models that achieved zero success in that category."
+  },
+  {
+    "id": 42,
+    "arxiv_id": "2606.04751",
+    "title": "Evaluating Inductive Reasoning in LLMs with Rule Discovery Games",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the results in section E.4, how did the number of guesses and confirmation bias differ between successful and failed games?",
+    "answer": "Failed games involved significantly more guesses and higher levels of confirmation bias than successful ones across nearly all models. For instance, Llama-4-Maverick averaged 8.5 guesses in failed games versus 3.8 in successful ones, while GPT-5.2-Chat exhibited 50% confirmation bias in failed games compared to 20% in successful ones. This suggests models relied on guessing and negative feedback when they could not efficiently explore the hypothesis space."
+  },
+  {
+    "id": 43,
+    "arxiv_id": "2606.04752",
+    "title": "spanning a shared-scalar baseline, per-channel linear projections, an orthogonality regulariser, a",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which six encoder variants share the exact same causal transformer backbone, and what are the primary architectural specifications of that backbone?",
+    "answer": "The six encoders that share the common backbone are sum, linear, linear-ortho, mlp, linear-ppe, and concat. The backbone is defined as a small causal transformer with a dmodel of 64, 4 attention heads, 3 layers, a feed-forward width of 256, dropout of 0.1, pre-LayerNorm, and a linear categorical head mapping to 32 logits."
+  },
+  {
+    "id": 44,
+    "arxiv_id": "2606.04752",
+    "title": "spanning a shared-scalar baseline, per-channel linear projections, an orthogonality regulariser, a",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the provided results table, what happens to the validation NLL of the encoders when the dmodel is increased to 128 or 256?",
+    "answer": "All encoders flag as overfitting at dmodel levels of 128 or higher, causing the validation NLL to drift upward if training continues to 300 epochs. As a result, the reported best-NLL numbers for these higher dimensions are determined by effective-early-stopping minima, which occur much earlier in the training process (typically around epoch 100 for d=128 and epoch 40 for d=256)."
+  },
+  {
+    "id": 45,
+    "arxiv_id": "2606.04752",
+    "title": "spanning a shared-scalar baseline, per-channel linear projections, an orthogonality regulariser, a",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Why does the 'sum' encoder baseline consistently fail, and how does the theoretical ceiling for recovery relate to the layer-0 probe results?",
+    "answer": "The 'sum' encoder fails because it uses a shared scalar projection that collapses per-channel directions into one, creating a (C-1)-dimensional null space that destroys information before it reaches the transformer. For independent unit-variance channels at C=4, the theoretical ceiling for linearly recovering one channel from the sum is 0.25, and the layer-0 probe of the sum encoder achieves an R2 of approximately 0.24, confirming it is hitting that theoretical limit."
+  },
+  {
+    "id": 46,
+    "arxiv_id": "2606.04754",
+    "title": "Vincent B ¨urgin* 1Daniel Herbst* 1Ya-Wei Eileen Lin1Stefanie Jegelka1 2",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the paper define 'effective symmetry breaking' in the context of neural networks?",
+    "answer": "Effective symmetry breaking refers to the use of architectural asymmetries to bias training towards a consistent assignment of features to neurons. This contrasts with symmetric layers, where the assignment of features is determined by the initialization. By implementing this, neurons are provided with distinguishable identities that lead to consistent assignments across independent training runs."
+  },
+  {
+    "id": 47,
+    "arxiv_id": "2606.04754",
+    "title": "Vincent B ¨urgin* 1Daniel Herbst* 1Ya-Wei Eileen Lin1Stefanie Jegelka1 2",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which specific architectures have permutation alignment algorithms been applied to, and what distinction is noted regarding their application to Transformers?",
+    "answer": "Alignment methods have been primarily applied to MLPs by permuting neurons and convolutional architectures like ResNets by permuting channels. Recently, they have been successfully applied to Transformers for both vision and language tasks. The text notes that vision task models appear to be easier to align than language models."
+  },
+  {
+    "id": 48,
+    "arxiv_id": "2606.04754",
+    "title": "Vincent B ¨urgin* 1Daniel Herbst* 1Ya-Wei Eileen Lin1Stefanie Jegelka1 2",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What happens to the realization cost in the ridgeless limit as beta approaches zero, and what is the primary drawback of this limit regarding distribution perturbations?",
+    "answer": "In the ridgeless limit as beta approaches zero, the problem simplifies conceptually and recovers the realization cost from section 4.1, which admits an explicit closed form. However, because this limit enforces exact realizability, it is singular under perturbations of the support. Even a small amount of mass outside the top-k subspace can destroy feasibility on the original distribution and cause the hard cost to jump to positive infinity."
+  },
+  {
+    "id": 49,
+    "arxiv_id": "2606.04767",
+    "title": "Measuring Model Robustness via Fisher Information: Spectral Bounds,",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What mathematical relationship does Theorem 6 establish between the KL divergence of two class confidence distributions and the Fisher information matrix?",
+    "answer": "Theorem 6 states that for any two class confidence distributions p(y|x) and p(y|x'), the KL divergence is approximately equal to half of the Mahalanobis distance involving the Fisher information matrix. Mathematically, this is expressed as KL(p(y|x), p(y|x')) ≈ 1/2(x'-x)^T F(x) (x'-x), or 1/2 δ^T F(x) δ."
+  },
+  {
+    "id": 50,
+    "arxiv_id": "2606.04767",
+    "title": "Measuring Model Robustness via Fisher Information: Spectral Bounds,",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the spectral norm of the FIM, ||F(x)||_2, relate to the certification radius 'r' in random smoothing?",
+    "answer": "According to the provided text, the spectral norm of the Fisher information matrix limits the upper bound of the expectation of the certification radius 'r'. The relationship is expressed by the inequality E_δ[r] ≤ √(2πσ^2 / 4p) * ||F(x)||_2."
+  },
+  {
+    "id": 51,
+    "arxiv_id": "2606.04767",
+    "title": "Measuring Model Robustness via Fisher Information: Spectral Bounds,",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Why is the 'indirect estimation' of F(x) described as more efficient than direct estimation in the context of the provided complexity tables?",
+    "answer": "Indirect estimation is more efficient because it reduces space complexity for eigendecomposition from O(d^2) to O(dK) and reduces time complexity for eigendecomposition from O(Kd^2 + d^3) to O(dK^2 + K^3). By applying the low-rank structure of F(x) and computing (Q(Λ(Q^T b_t))) instead of QΛQ^T b_t, the method avoids storing or processing the full dxd matrix, making the robustness metrics more feasible for large-scale applications."
+  },
+  {
+    "id": 52,
+    "arxiv_id": "2606.04769",
+    "title": "{yutaoshi24, zhangxj25, shenxh24, yhou23, hmqiu23}@m.fudan.edu.cn",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What mechanisms are included in the 'DCIChecker' framework to address potential limitations when using LLMs for detection?",
+    "answer": "The DCIChecker framework uses LLM-driven semantic cross-validation to identify DCI. To mitigate common LLM issues like bias and hallucinations, the framework specifically features bidirectional prompting and arbitration."
+  },
+  {
+    "id": 53,
+    "arxiv_id": "2606.04769",
+    "title": "{yutaoshi24, zhangxj25, shenxh24, yhou23, hmqiu23}@m.fudan.edu.cn",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the large-scale empirical study of 2,214 MCP servers, what is the prevalence of DCI, and which specific type accounts for the majority of identified cases?",
+    "answer": "The study found that 9.93% of tools are inconsistent and 35.00% of servers contain at least one DCI case. Among the 1,907 identified cases, 75.2% are classified as Type I Mismatched Functionality, with the most frequent subtype being 'Func-Over' at 35.40%."
+  },
+  {
+    "id": 54,
+    "arxiv_id": "2606.04769",
+    "title": "{yutaoshi24, zhangxj25, shenxh24, yhou23, hmqiu23}@m.fudan.edu.cn",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the Python SDK handle tool descriptions when developers omit docstrings?",
+    "answer": "The Python SDK supports an implicit mode that automatically generates tool descriptions from function docstrings. However, if those docstrings are omitted by the developer, the tool is exposed without any description at all."
+  },
+  {
+    "id": 55,
+    "arxiv_id": "2606.04772",
+    "title": "2Vietnam National University - Ho Chi Minh City, University of Science, Vietnam",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the key differences in how the linear baselines and the CHASMBrain model handle spatial structure in their architectures?",
+    "answer": "The linear baselines collapse spatial structure into a single 768-dimensional vector using global average pooling. In contrast, the CHASMBrain model preserves and separately processes both the CLS token and 256 individual patch tokens. This dual-stream design allows the model to maintain spatial and semantic specificity."
+  },
+  {
+    "id": 56,
+    "arxiv_id": "2606.04772",
+    "title": "2Vietnam National University - Ho Chi Minh City, University of Science, Vietnam",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specific hyperparameters and settings are used during the training of Stage 2 of the CHASMBrain model?",
+    "answer": "Stage 2 is trained for 150 epochs using a batch size of 16 and a learning rate of 10^-4. The training process uses a KL weight beta of 0.001 and involves freezing the weights from Stage 1. Additionally, the VAE latent space dimension is set to 256, and the InfoNCE temperature is set to tau equal to 0.07."
+  },
+  {
+    "id": 57,
+    "arxiv_id": "2606.04772",
+    "title": "2Vietnam National University - Ho Chi Minh City, University of Science, Vietnam",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the discussion on limitations, what are the primary factors constraining the predictive performance of CHASMBrain?",
+    "answer": "The model's predictive upper bound is constrained by the inherent physiological noise of fMRI signals, which has a noise ceiling of approximately 0.60. Furthermore, the pipeline is limited by a frozen DINOv2 encoder that may lack the temporal dynamics found in natural human vision. Additional constraints include the need for future cross-dataset evaluation and the hallucination tendencies of the fMRI-to-image decoder."
+  },
+  {
+    "id": 58,
+    "arxiv_id": "2606.04775",
+    "title": "Text-to-video (T2V) models trained on large-scale web data can generate undesired",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specific hardware or software assumptions does LA-LQR make, and what is the consequence if these assumptions are not met?",
+    "answer": "LA-LQR assumes white-box activation access and guarantees that embeddings will satisfy the disturbance bound ξ defined in Corollary 4.1. If the prompts are adversarially-selected, the assumption of local linear latent dynamics may degrade, potentially reducing the framework's effectiveness."
+  },
+  {
+    "id": 59,
+    "arxiv_id": "2606.04775",
+    "title": "Text-to-video (T2V) models trained on large-scale web data can generate undesired",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the identified memory and storage limitations of the LA-LQR framework, and what potential solutions does the paper propose?",
+    "answer": "LA-LQR incurs memory and storage overhead because projection bases and projected dynamics must be stored across layers and timesteps, despite avoiding full activation-space Jacobians. To address this, the authors suggest that using coarser basis sharing or quantized projections could reduce these associated costs."
+  },
+  {
+    "id": 60,
+    "arxiv_id": "2606.04775",
+    "title": "Text-to-video (T2V) models trained on large-scale web data can generate undesired",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How do the steering hyperparameters Q, R, QH, and λ influence the behavior of the LA-LQR framework?",
+    "answer": "These hyperparameters have intuitive effects on the steering process: larger values of Q or λ, or a smaller value of R, will strengthen the steering effect. The authors suggest that future work could involve automating the tuning of these parameters using adaptive LQR controllers driven by detector feedback."
+  },
+  {
+    "id": 61,
+    "arxiv_id": "2606.04778",
+    "title": "Inference-Time Vulnerability Beyond Shallow Safety:",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which specific large language models are evaluated in the study regarding the injection of harmful or refusal statements?",
+    "answer": "The models evaluated in the study are Mistral-7B-Instruct-v0.3, Qwen2.5-7B-Instruct, and Llama-3.1-8B-Instruct. These models are tested by injecting fixed token sequences to observe changes in safety behavior."
+  },
+  {
+    "id": 62,
+    "arxiv_id": "2606.04778",
+    "title": "Inference-Time Vulnerability Beyond Shallow Safety:",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the injection ablation study for the Llama-3.1-8B-Instruct model, how do benign injection phrases compare to affirmative-harmful phrases in terms of ASR on the base model?",
+    "answer": "On the base model, affirmative-harmful phrases produce the highest Attack Success Rate (ASR) at 46.3/59.0. In contrast, benign phrases with no harmful content still reach an ASR of 26.3/23.7."
+  },
+  {
+    "id": 63,
+    "arxiv_id": "2606.04778",
+    "title": "Inference-Time Vulnerability Beyond Shallow Safety:",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Does the effect of harmful or refusal token injections on safety behavior disappear after the initial output prefix of a generation?",
+    "answer": "No, the effect does not disappear; it persists throughout the generation. While the effect is strongest early, the study indicates that the vulnerability is not confined to the initial output prefix."
+  },
+  {
+    "id": 64,
+    "arxiv_id": "2606.04780",
+    "title": "4University of Chinese Academy of Sciences, Beijing, China5School of BME, Beihang University, Beijing, China",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What four specific maintenance processes are used to manage the PERSONATREE structured memory framework?",
+    "answer": "The PERSONATREE framework maintains its memory through online evidence insertion, offline consolidation, confidence update, and query conditioned retrieval. These processes allow the system to represent user experience as a three-level persona tree."
+  },
+  {
+    "id": 65,
+    "arxiv_id": "2606.04780",
+    "title": "4University of Chinese Academy of Sciences, Beijing, China5School of BME, Beihang University, Beijing, China",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does support path retrieval compare to flat set retrieval in terms of RealPref composite scores and context token usage?",
+    "answer": "Support path retrieval improves the RealPref composite score from 75.7 to 78.1. This improvement occurs while maintaining similar context sizes, with flat retrieval using 3.18k tokens and support path retrieval using 2.99k tokens."
+  },
+  {
+    "id": 66,
+    "arxiv_id": "2606.04780",
+    "title": "4University of Chinese Academy of Sciences, Beijing, China5School of BME, Beihang University, Beijing, China",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the layer activation analysis, how does the memory level activated by PERSONATREE vary based on the type of question asked?",
+    "answer": "The memory level activated depends on the task type: factual questions rely more heavily on Leaf nodes, temporal and narrative questions shift toward Mid nodes, and insight questions activate Root nodes more frequently."
+  },
+  {
+    "id": 67,
+    "arxiv_id": "2606.04781",
+    "title": "AIP: A Graph Representation for Learning and Governing Agent",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the specific technical components that constitute a skill within the Agent Instruction Protocol (AIP)?",
+    "answer": "Within AIP, a skill is modeled as a directed execution graph. Discrete steps function as nodes that are supported by either deterministic scripts or natural-language descriptions when human-like judgment is required. These nodes are linked by typed input/output edges and are governed by a schema-validated YAML specification."
+  },
+  {
+    "id": 68,
+    "arxiv_id": "2606.04781",
+    "title": "AIP: A Graph Representation for Learning and Governing Agent",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How were the 27 evaluation tasks organized in Table 1, and what criteria were used to define a 'pass' in the experimental results?",
+    "answer": "The 27 evaluation tasks were grouped by the AIP spec version they were compiled against, specifically the 24-task stratified cohort (v0.3a3) and the three-task supplementary reference set (v0.3a2). A 'pass' was defined as a passing verifier resulting in a reward of 1, whereas trials that hit the wall-clock cap or idle limit were classified as timeouts with a reward of 0."
+  },
+  {
+    "id": 69,
+    "arxiv_id": "2606.04781",
+    "title": "AIP: A Graph Representation for Learning and Governing Agent",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the paper, why does compiling human-written skills into AIP lead to performance gains on SkillsBench?",
+    "answer": "Compiling skills into AIP provides a statistically significant gain in task reward because it replaces the need for the agent to re-plan from prose. Instead, the agent is provided with vetted, runnable units and a fixed procedure, which increases both executability and the ability to improve the skill."
+  },
+  {
+    "id": 70,
+    "arxiv_id": "2606.04797",
+    "title": "personalized concepts. However, the majority of CDMs unrealistically presume that the user’s collection of personalized concepts is static",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the two primary challenges defined in the CIVC problem?",
+    "answer": "The two challenges are Catastrophic Forgetting and Concept Neglect. Catastrophic Forgetting refers to the loss of unique attributes of old concepts when existing diffusion models merge low-rank weights to learn new ones, particularly when concepts are semantically similar. Concept Neglect refers to the failure of intended concepts to be correctly synthesized or positioned at user-specified spatial locations during multi-concept composition."
+  },
+  {
+    "id": 71,
+    "arxiv_id": "2606.04797",
+    "title": "personalized concepts. However, the majority of CDMs unrealistically presume that the user’s collection of personalized concepts is static",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the formula for calculating the region noise estimation, Et r, in the described method?",
+    "answer": "The region noise estimation at the t-th timestep is defined by the formula Et r = ϵθ′∗(zt|t) + s(ϵ θ′∗(zt|{bcw,bbw}η w=1, t) - ϵθ′∗(zt|t)). In this equation, the term s represents a scaling factor set to 7.5. The estimation is derived by incorporating new embeddings of the region conditions into the UNet to produce the layer output."
+  },
+  {
+    "id": 72,
+    "arxiv_id": "2606.04797",
+    "title": "personalized concepts. However, the majority of CDMs unrealistically presume that the user’s collection of personalized concepts is static",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the provided references, which paper describes the 'Mix-of-show' method for decentralized low-rank adaptation?",
+    "answer": "The 'Mix-of-show' method for decentralized low-rank adaptation for multi-concept customization of diffusion models is described in reference [17]. This work was authored by Y. Gu, X. Wang, J. Z. Wu, Y. Shi, C. Yunpeng, Z. Fan, et al., and was published in the 2023 NeurIPS proceedings."
+  },
+  {
+    "id": 73,
+    "arxiv_id": "2606.04804",
+    "title": "1RIKEN iTHEMS2RIKEN AIP3South China University of Technology4Columbia University",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What systematic bias is identified in physics-constrained generative posteriors when enforcing a hard PDE constraint without the Fixman correction?",
+    "answer": "The authors identify a systematic bias where the model samples the wrong distribution. This bias occurs by a factor that scales with the heterogeneity of the constraint sensitivity, as established in the paper's theorems, corollaries, and propositions."
+  },
+  {
+    "id": 74,
+    "arxiv_id": "2606.04804",
+    "title": "1RIKEN iTHEMS2RIKEN AIP3South China University of Technology4Columbia University",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the Darcy flow experiments, how does the performance of the CoCoS sampler compare to the no-Fixman and PCFM methods?",
+    "answer": "According to the findings in Table 2, the error ordering is consistently CoCoS << no-Fixman << PCFM across all tested problem instances. The CoCoS sampler remains at 1.2–3.1 times the noise floor, demonstrating superior performance compared to the other methods."
+  },
+  {
+    "id": 75,
+    "arxiv_id": "2606.04804",
+    "title": "1RIKEN iTHEMS2RIKEN AIP3South China University of Technology4Columbia University",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Why do the authors argue that an MCMC 'gold standard' using HMC on the soft posterior at small gamma is unreliable for evaluating physics-constrained posteriors?",
+    "answer": "The authors found that this MCMC method fails to mix in the stiff, small-gamma regime. This failure causes it to masquerade as agreement under loose tolerances and as disagreement under tight ones, necessitating the use of an i.i.d. rejection arbiter instead."
+  },
+  {
+    "id": 76,
+    "arxiv_id": "2606.04806",
+    "title": "Sichao Li1Sai Ma2Daniel Kilov2Secil Yanik Guyot2Zhuang Li3Seth Lazar2,4∗",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specifically does the NORA benchmark aim to measure regarding a model's capabilities?",
+    "answer": "NORA measures grounded reasonableness, which is defined as the ability of a model to identify salient scene facts, represent reasons for or against candidate actions, and select an action supported by those reasons. This approach focuses on structured agreement with human-reviewed support graphs rather than claiming a uniquely correct annotation or resolving long-horizon consequences."
+  },
+  {
+    "id": 77,
+    "arxiv_id": "2606.04806",
+    "title": "Sichao Li1Sai Ma2Daniel Kilov2Secil Yanik Guyot2Zhuang Li3Seth Lazar2,4∗",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What design choices were implemented to ensure the quality of the NORA benchmark?",
+    "answer": "Two key design choices were implemented: instructions were designed to sharply separate descriptive facts from normative conclusions to prevent moral judgment leakage into the factual inventory. Additionally, annotators were instructed to focus specifically on the immediate next action rather than long-term outcomes."
+  },
+  {
+    "id": 78,
+    "arxiv_id": "2606.04806",
+    "title": "Sichao Li1Sai Ma2Daniel Kilov2Secil Yanik Guyot2Zhuang Li3Seth Lazar2,4∗",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the key constraints for the 'Direct' prompt regime used in the NORA benchmark evaluation?",
+    "answer": "The Direct regime requires the output to consist of a single section containing the chosen action, which must include only the action ID and a short description. Models are prohibited from including facts, candidate actions, reasons, scores, or any extra commentary, and must rely solely on visible evidence."
+  },
+  {
+    "id": 79,
+    "arxiv_id": "2606.04807",
+    "title": "BiasGRPO: Stabilizing Bias Mitigation in High-Variance Reward",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the Identity Preference Optimization (IPO) variant differ from standard DPO according to the provided text?",
+    "answer": "IPO differs from standard DPO by incorporating a regularization term into the DPO loss function. This term is intended to prevent overfitting by controlling the gap between the log-likelihood ratios of favorable and unfavorable completions."
+  },
+  {
+    "id": 80,
+    "arxiv_id": "2606.04807",
+    "title": "BiasGRPO: Stabilizing Bias Mitigation in High-Variance Reward",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the experiments with group sizes (G), what evidence suggests that the mechanism of reward normalization is the primary driver of success in GRPO?",
+    "answer": "The text notes that the G=2 variant significantly underperforms the G=4 variant across all benchmarks because the group-relative effect is minimized to a binary comparison. Increasing the group size to G=4 and G=8 creates a diverse spectrum of completions that allows for stable, granular learning signals, confirming that normalizing rewards across a diverse set is more critical than the online nature of training alone."
+  },
+  {
+    "id": 81,
+    "arxiv_id": "2606.04807",
+    "title": "BiasGRPO: Stabilizing Bias Mitigation in High-Variance Reward",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the provided data table for benchmarks, how does the Custom Reward Model (RM) perform on the BOLD (Religion) category compared to the Base and Alternative models?",
+    "answer": "In the BOLD (Religion) category, the Custom RM achieves a score of .0295. This represents an improvement in bias reduction compared to the Base model, which scored .0703, and the Alternative RM, which scored .0516."
+  },
+  {
+    "id": 82,
+    "arxiv_id": "2606.04812",
+    "title": "Scenario Generation for Risk-Aware Reinforcement Learning",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are two specific factors that contribute to the difference between upper and lower bounds on the probability of violating safety constraints?",
+    "answer": "Differences between the bounds can occur due to a disparity between the distribution of states encountered during training and those encountered during deployment. Additionally, a lack of exploration can contribute to this difference, as an agent may enter insufficiently encountered territory without explicitly violating safety constraints."
+  },
+  {
+    "id": 83,
+    "arxiv_id": "2606.04812",
+    "title": "Scenario Generation for Risk-Aware Reinforcement Learning",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the mathematical formulation of Problem 3, what specific condition must the lower-bound value 𝜖1 and barrier-certificate function B1 satisfy with confidence 𝛿?",
+    "answer": "The lower-bound value 𝜖1 and barrier-certificate function B1 must satisfy the condition that a trajectory and its corresponding encoded trajectory violate safety constraints with less than 𝜖1 probability at timestep t. This is expressed by the inequality P(B1𝜙(z)>0 | P(U(𝜏)<0)>𝜖1) < 𝛿 for all z in 𝜁."
+  },
+  {
+    "id": 84,
+    "arxiv_id": "2606.04812",
+    "title": "Scenario Generation for Risk-Aware Reinforcement Learning",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the primary significance of incorporating generative modeling into the verification and training process according to the paper's findings?",
+    "answer": "The incorporation of generative modeling is described as a step toward creating explainable reinforcement learning systems. These systems are capable of providing quantifiable assurances of safety prior to their deployment."
+  },
+  {
+    "id": 85,
+    "arxiv_id": "2606.04815",
+    "title": "Bo Mao1, Jie Zhou1,2∗, Yutao Yang1, Xin Li2, Xian Wei3, Qin Chen1, Xingjiao Wu1, Liang He1",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the two primary limitations of current agent approaches identified in the introduction?",
+    "answer": "The first limitation is that most agents keep model parameters fixed at test time, relying solely on external memories, which prevents true learning during deployment. The second limitation is that while prior work can summarize trajectories or produce reflections, the extraction of reusable skills from interaction feedback remains insufficiently explored."
+  },
+  {
+    "id": 86,
+    "arxiv_id": "2606.04815",
+    "title": "Bo Mao1, Jie Zhou1,2∗, Yutao Yang1, Xin Li2, Xian Wei3, Qin Chen1, Xingjiao Wu1, Liang He1",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which specific baselines were used for comparison against LifeSkill in the training-based methods category?",
+    "answer": "The training-based methods compared against LifeSkill include Rejection Sampling Fine-Tuning (RFT), SkillRL, and DAPO. These methods update model parameters but do not perform online dual-model co-evolution."
+  },
+  {
+    "id": 87,
+    "arxiv_id": "2606.04815",
+    "title": "Bo Mao1, Jie Zhou1,2∗, Yutao Yang1, Xin Li2, Xian Wei3, Qin Chen1, Xingjiao Wu1, Liang He1",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the technical specifications for the LoRA adapters used in LifeSkill?",
+    "answer": "In LifeSkill, both the Policy Model and the Skill Extraction Model are initialized from the same Llama-3.1-8B-Instruct backbone. They each maintain separate LoRA adapters with a rank of 32 and an alpha value of 64."
+  },
+  {
+    "id": 88,
+    "arxiv_id": "2606.04816",
+    "title": "Xizi Luo1,2†, Changhong He1,2†, Dongdong Geng2, Chenggong Shi2, Yu Mei2∗",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the primary objective of the work described in the 'Intro/Abstract' section compared to existing literature like DRoC, ARS, and AFL?",
+    "answer": "Existing research such as DRoC, ARS, and AFL focuses on improving VRP solving through inference-time mechanisms and agentic workflows over frozen LLMs. This paper distinguishes itself by addressing whether generated solver code faithfully encodes intended constraints, a concern not covered by those prior studies."
+  },
+  {
+    "id": 89,
+    "arxiv_id": "2606.04816",
+    "title": "Xizi Luo1,2†, Changhong He1,2†, Dongdong Geng2, Chenggong Shi2, Yu Mei2∗",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the 'Methods/Experiments' section, how does the 'hexagon subfamily' of profile 13 structure its customer placement and capacity settings?",
+    "answer": "The hexagon subfamily of profile 13 is designed to focus on depot connectivity and subtour structure by using n=6 customers and k=1 vehicle. Customers are placed on a regular hexagon with a radius r between 15 and 25, while the depot is located at the midpoint of one of the hexagon's edges. Additionally, the capacity Q is fixed at 100 to ensure it remains safely non-binding."
+  },
+  {
+    "id": 90,
+    "arxiv_id": "2606.04816",
+    "title": "Xizi Luo1,2†, Changhong He1,2†, Dongdong Geng2, Chenggong Shi2, Yu Mei2∗",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the requirements for 'Index preservation' when generating a natural-language business problem description from Gurobi solver code?",
+    "answer": "Index preservation requires that every vehicle, customer, and depot must retain its explicit numeric ID from the original code. Entities must not be described by type alone and should be labeled specifically, such as 'Truck 0 (capacity 50.0, fixed cost 70.0)'. Furthermore, the data must never be renumbered or reordered."
+  },
+  {
+    "id": 91,
+    "arxiv_id": "2606.04823",
+    "title": "1Idiap Research Institute, Switzerland2École Polytechnique Fédérale de Lausanne (EPFL), Switzerland",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the R-APS system differentiate between types of failures during the staged compositional reasoning process?",
+    "answer": "R-APS uses typed validation critics to attribute failure to a specific named stage rather than merely checking constraints. Failure diagnosis distinguishes between topology-level errors (a fundamental mismatch where f1 > 10ε traj) and optimization failures (where f1 > ε traj), which prevents the failure propagation that typically affects monolithic approaches."
+  },
+  {
+    "id": 92,
+    "arxiv_id": "2606.04823",
+    "title": "1Idiap Research Institute, Switzerland2École Polytechnique Fédérale de Lausanne (EPFL), Switzerland",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What happens during the selective refinement process when an optimization failure is diagnosed by a validation critic?",
+    "answer": "When an optimization failure is diagnosed, the system switches its strategy between BFGS, particle swarm optimization (PSO), and Grid. It then re-runs Stage 3 while keeping the previously validated topology and parameters intact."
+  },
+  {
+    "id": 93,
+    "arxiv_id": "2606.04823",
+    "title": "1Idiap Research Institute, Switzerland2École Polytechnique Fédérale de Lausanne (EPFL), Switzerland",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to Table 14, why is the Parabola shape reported in its own row instead of being included in an aggregate?",
+    "answer": "The Parabola shape is reported separately because its raw scale is approximately 100 times larger than the other shapes in the table. Including it in an aggregate would bury the actual number, so reporting it independently makes the value visible."
+  },
+  {
+    "id": 94,
+    "arxiv_id": "2606.04833",
+    "title": "Signed Dual Attention: Capturing Signed Dependencies in Time Series Forecasting",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Why are standard attention mechanisms considered insufficient for modeling certain real-world time series data according to the authors?",
+    "answer": "Standard attention mechanisms focus solely on positive scores after a softmax activation function, which assumes a homophilic structure. Real-world time series often exhibit negative correlations and opposite trends, which these standard mechanisms fail to efficiently capture because they cannot model negative relationships."
+  },
+  {
+    "id": 95,
+    "arxiv_id": "2606.04833",
+    "title": "Signed Dual Attention: Capturing Signed Dependencies in Time Series Forecasting",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How is the output of the Signed Dual Attention (SDA) block calculated in terms of its attention matrices?",
+    "answer": "The SDA block computes two attention matrices, A+ and A-, using the query and key matrices. The output is then determined by the formula SDA(Q, K, V) = (A+ - A-)V, where the subtraction ensures that negative interactions transmit opposite information relative to the supportive, homophilic interactions encoded by A+."
+  },
+  {
+    "id": 96,
+    "arxiv_id": "2606.04833",
+    "title": "Signed Dual Attention: Capturing Signed Dependencies in Time Series Forecasting",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the relationship between the Signed Dual Attention (SDA) block and a two-head self-attention mechanism?",
+    "answer": "The Signed Dual Attention block can be interpreted as a constrained variant of a two-head self-attention mechanism. It mirrors this architecture by setting parameters such that the first head uses standard weights, while the second head utilizes negative values for the key and value matrices."
+  },
+  {
+    "id": 97,
+    "arxiv_id": "2606.04834",
+    "title": "Prediction Under Imperfect Compression:",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How is the regularized MDL score defined in the context of the paper's sequential prediction framework?",
+    "answer": "The regularized MDL score is defined as Lλ,w(ν;x<t) := λKw(ν) + log2ν(x<t)−1. In this equation, λ > 0 is the parameter that controls the strength of the regularization, while Kw(ν) represents the term −log2wν derived from the assigned positive weights of the model class."
+  },
+  {
+    "id": 98,
+    "arxiv_id": "2606.04834",
+    "title": "Prediction Under Imperfect Compression:",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the result of the additive approximation condition on cumulative error when the regularization parameter λ satisfies λ ≥ 1?",
+    "answer": "When λ ≥ 1, the cumulative error is finite, as established by the result S∞(µ,ρ) ≤ 16K PHλ2C/λw−1 µ. The paper notes that this demonstrates that the classical boundary of λ = 1 remains safe under additive approximation."
+  },
+  {
+    "id": 99,
+    "arxiv_id": "2606.04834",
+    "title": "Prediction Under Imperfect Compression:",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specific consequence for the universal prediction setting occurs when the regularization parameter λ is in the range (0, 1)?",
+    "answer": "When λ is between 0 and 1, the paper indicates that pointwise overfitting occurs. This range results in infinite cumulative error, contrasting with the finite cumulative error observed when λ is at or above the classical boundary of 1."
+  },
+  {
+    "id": 100,
+    "arxiv_id": "2606.04846",
+    "title": "LARGELANGUAGEMODELS INK-12 EDUCATION: ALIGNMENT",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the four primary research questions the authors investigate regarding U.S. history standards and LLMs?",
+    "answer": "The authors investigate the divergence in topic coverage and framing among state-level U.S. history standards and how LLM-generated responses align with these different standards. They also examine if LLM responses can be steered toward a target state's standards and whether a student's demographic attributes influence the information provided."
+  },
+  {
+    "id": 101,
+    "arxiv_id": "2606.04846",
+    "title": "LARGELANGUAGEMODELS INK-12 EDUCATION: ALIGNMENT",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the methods section, what is the procedure for establishing baseline models for the State Alignment evaluation?",
+    "answer": "The evaluation begins by prompting baseline models with questions about identified topics without specifying any user demographics. These resulting responses are saved as a baseline for later comparison and are evaluated using metrics outlined in Section 3.2."
+  },
+  {
+    "id": 102,
+    "arxiv_id": "2606.04846",
+    "title": "LARGELANGUAGEMODELS INK-12 EDUCATION: ALIGNMENT",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the provided example regarding the secession crisis, what specific classification did Llama 3.3 assign to the baseline response regarding the role of slavery?",
+    "answer": "The classification by Llama 3.3 is presented in the context of comparing Florida and New York state standards. It categorized the response as 'Foregrounds slavery as the central cause'."
+  },
+  {
+    "id": 103,
+    "arxiv_id": "2606.04847",
+    "title": "Kun Cheng1, Songshuo Lu1, Sicong Liao1, Tankun Li1, Yafei Zhang1",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What criteria are used to filter generated computation graphs before they are converted into kernel generation prompts?",
+    "answer": "Generated computation graphs are filtered based on four specific criteria: executability, input-output stability, graph scale, and task adaptability. Additionally, all graphs are validated via the TorchScript backend."
+  },
+  {
+    "id": 104,
+    "arxiv_id": "2606.04847",
+    "title": "Kun Cheng1, Songshuo Lu1, Sicong Liao1, Tankun Li1, Yafei Zhang1",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the evaluation protocol define a 'faster' candidate in the context of kernel runtime speedups?",
+    "answer": "A candidate is only considered faster if it first passes all required correctness and legality checks. Furthermore, the candidate must achieve a runtime speedup of strictly greater than 1.1x over the baseline. This 1.1x threshold is specifically used to filter out marginal runtime differences that could be caused by measurement noise."
+  },
+  {
+    "id": 105,
+    "arxiv_id": "2606.04847",
+    "title": "Kun Cheng1, Songshuo Lu1, Sicong Liao1, Tankun Li1, Yafei Zhang1",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the difference in feedback provided by the multi-turn dialogue system when a kernel candidate fails versus when it succeeds?",
+    "answer": "When a candidate fails, the system provides repair-oriented feedback that prioritizes resolving compilation and correctness issues. If a candidate is correct, the system provides optimization-oriented feedback, which instructs the model to focus on performance improvements like reducing launch overhead or fusing adjacent operators while keeping output semantics unchanged."
+  },
+  {
+    "id": 106,
+    "arxiv_id": "2606.04857",
+    "title": "missing rate alone is insufﬁcient to characterize data incompleteness. Speciﬁcally,",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What justifies the authors' assessment that the CRAFT model does not pose high-risk safety concerns?",
+    "answer": "The authors state that the model does not require safeguards because CRAFT is a clustering model trained on publicly available benchmarks. They explicitly categorize the work as posing no risk for misuse or dual-use, resulting in an '[N/A]' classification regarding safety risks."
+  },
+  {
+    "id": 107,
+    "arxiv_id": "2606.04857",
+    "title": "missing rate alone is insufﬁcient to characterize data incompleteness. Speciﬁcally,",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the training time for CRAFT compare to the DCP method on the YTF-31 dataset?",
+    "answer": "According to the results section, the train-once advantage of CRAFT allows it to compress a 16-run DCP grid that typically takes approximately 16 hours. In contrast, the equivalent task for CRAFT is completed in approximately 3 hours."
+  },
+  {
+    "id": 108,
+    "arxiv_id": "2606.04857",
+    "title": "missing rate alone is insufﬁcient to characterize data incompleteness. Speciﬁcally,",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which seven benchmarks were used as datasets for the CRAFT model, and are they properly credited?",
+    "answer": "The seven benchmarks used are CUB, HandWritten (mfeat), MultiFashion, UCI-Digit, Out-Scene, Caltech, and YTF-31. The authors justify that these are publicly available standard datasets and provide download links and preprocessing notes in the repository, while also citing the original papers for all baseline implementations."
+  },
+  {
+    "id": 109,
+    "arxiv_id": "2606.04867",
+    "title": "LLMs-as-Judges for AI Companion Safety",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the two specific conditions under which an interaction in human–AI conversations is formally defined as unsafe?",
+    "answer": "An unsafe interaction is defined as occurring if the AI companion initiates an inappropriate or harmful topic. It is also considered unsafe if the user initiates an inappropriate topic and the AI companion follows, reinforces, or escalates the conversation in that direction."
+  },
+  {
+    "id": 110,
+    "arxiv_id": "2606.04867",
+    "title": "LLMs-as-Judges for AI Companion Safety",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the summary statistics in Table IV, what are the minimum and maximum values for the total number of messages in a conversation within AICompanionBench?",
+    "answer": "The total number of messages in a conversation ranges from a minimum of 1 to a maximum of 50. These statistics reflect the composition of the 2,123 human–AI companion interactions included in the dataset."
+  },
+  {
+    "id": 111,
+    "arxiv_id": "2606.04867",
+    "title": "LLMs-as-Judges for AI Companion Safety",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the distribution of categories within the AICompanionBench dataset compare in terms of frequency?",
+    "answer": "The dataset covers nine categories with a markedly skewed distribution. Certain behaviors, such as sexual content, occur much more frequently than others. Conversely, categories including self-harm or manipulation are described as being comparatively rare."
+  },
+  {
+    "id": 112,
+    "arxiv_id": "2606.04874",
+    "title": "1Tongji University2Shanghai AI Laboratory3Harbin Institute of Technology",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How are the tool invocation nodes defined within the holistic planning task?",
+    "answer": "Each tool invocation node is represented as ei = (ti, θi, ri). This includes a tool identifier (ti), the invocation arguments (θi), and an explicit rationale (ri)."
+  },
+  {
+    "id": 113,
+    "arxiv_id": "2606.04874",
+    "title": "1Tongji University2Shanghai AI Laboratory3Harbin Institute of Technology",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the purpose of the 'Tool-Extraneous Planning' task and how is the modified tool set T' constructed?",
+    "answer": "This task is designed to simulate open-domain noise by injecting semantically similar but irrelevant tools (Tr) into the original tool set (T). The modified tool set is formed as T' = T ∪ Tr, where the number of extraneous tools (ne) ranges from 2 to 10."
+  },
+  {
+    "id": 114,
+    "arxiv_id": "2606.04874",
+    "title": "1Tongji University2Shanghai AI Laboratory3Harbin Institute of Technology",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What specific logical flaw is identified in the 'Incorrect-Logical Defect (E4)' evaluation example regarding car purchases?",
+    "answer": "The model failed to propagate intermediate calculation results because it used the original 'ObjectCounter.count' in the later steps instead of the total quantity required. Consequently, the plan failed to account for the additional cars needed to satisfy the user's requirement to divide the total evenly."
+  },
+  {
+    "id": 115,
+    "arxiv_id": "2606.04876",
+    "title": "Mustafa Tajjar* 1 2Alexander Pfefferle* 3 1Lennart Purucker4 1Frank Hutter4 3 1",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the specific drawbacks of using traditional PCA-based preprocessing when integrating textual data with TabPFN?",
+    "answer": "The PCA-based approach introduces an information bottleneck that strips away semantic richness from high-dimensional LM embeddings before the data reaches the tabular model. Furthermore, this step prevents the pipeline from being fully differentiable, which precludes the ability to fine-tune the language model based on the predictive signal provided by TabPFN."
+  },
+  {
+    "id": 116,
+    "arxiv_id": "2606.04876",
+    "title": "Mustafa Tajjar* 1 2Alexander Pfefferle* 3 1Lennart Purucker4 1Frank Hutter4 3 1",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the TabPFN Text Adapter perform in regression tasks compared to the PCA-30 baseline, and what computational benefit does it offer?",
+    "answer": "In regression tasks, the TabPFN Text Adapter outperforms all other methods, including the PCA-30 baseline. It also offers a significant computational efficiency advantage because it occupies far fewer tokens than the PCA-30 baseline, which is particularly beneficial given the quadratic complexity of attention."
+  },
+  {
+    "id": 117,
+    "arxiv_id": "2606.04876",
+    "title": "Mustafa Tajjar* 1 2Alexander Pfefferle* 3 1Lennart Purucker4 1Frank Hutter4 3 1",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How is the min-max normalized ROC-AUC calculated for classification tasks in this study?",
+    "answer": "The ROC-AUC is computed per dataset and fold using the formula (AUC model - AUC worst) / (AUC best - AUC worst). In this calculation, the AUC worst and AUC best represent the minimum and maximum scores across all evaluated models on each specific fold, respectively. Finally, these results are averaged across all datasets and folds."
+  },
+  {
+    "id": 118,
+    "arxiv_id": "2606.04883",
+    "title": "Optimizing the Cost-Quality Tradeoff of Agentic Theorem Provers in Lean",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the two conceptual components of the agent architecture, and what is the primary role of each?",
+    "answer": "The agent architecture is separated into a proof-generation data plane and a cost-quality control plane. The data plane is responsible for decomposing problems into natural-language lemmas, formalizing them in Lean, and generating proof attempts. The control plane observes the proof trajectory and uses a lightweight model to estimate the cost and success probability of the next attempt to decide whether further compute allocation is worthwhile."
+  },
+  {
+    "id": 119,
+    "arxiv_id": "2606.04883",
+    "title": "Optimizing the Cost-Quality Tradeoff of Agentic Theorem Provers in Lean",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the medium-budget regime, how does the agent's performance compare to the fixed-step baseline regarding SFLOPs and solve rates?",
+    "answer": "In the medium-budget regime, the fixed-step baseline solves 41.8% of problems using 24.9M SFLOPs, while the agent solves 41.6% of problems using 17.5M SFLOPs. Consequently, the agent reduces the required cost by 29.6% compared to the baseline, while experiencing only a 0.2% decrease in the solve rate."
+  },
+  {
+    "id": 120,
+    "arxiv_id": "2606.04883",
+    "title": "Optimizing the Cost-Quality Tradeoff of Agentic Theorem Provers in Lean",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What does the gap between the oracle agent and the authors' agent suggest regarding the router’s performance?",
+    "answer": "The gap suggests that the oracle agent maintains a substantially stronger cost-quality tradeoff than the proposed agent. This indicates that better trajectory features or stronger quality estimators could improve the router's ability to terminate low-value targets earlier, as accurately identifying hard targets is highly valuable for adaptive routing."
+  },
+  {
+    "id": 121,
+    "arxiv_id": "2606.04889",
+    "title": "Reinforcement learning with verifiable rewards (e.g., GRPO) is now a common way to improve",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does GRAIL calculate the weights used to reweight the sequence-level advantage in the policy-gradient loss?",
+    "answer": "GRAIL computes a gradient-activation saliency score for each token. These token-level weights are derived directly from the model's intrinsic gradients during the training process, allowing for fine-grained credit assignment without the need for external supervision."
+  },
+  {
+    "id": 122,
+    "arxiv_id": "2606.04889",
+    "title": "Reinforcement learning with verifiable rewards (e.g., GRPO) is now a common way to improve",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the performance delta between GRAIL and OAR-G change when scaling the base model from 4B to 8B parameters?",
+    "answer": "The performance delta widens dramatically as the base model scales from 4B to 8B parameters. While GRAIL achieves a 1.47% absolute improvement in average accuracy on the 4B model, it achieves a 6.29% absolute gain over OAR-G on the 8B model."
+  },
+  {
+    "id": 123,
+    "arxiv_id": "2606.04889",
+    "title": "Reinforcement learning with verifiable rewards (e.g., GRPO) is now a common way to improve",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is identified as a key limitation of PRM-based approaches compared to the GRAIL method?",
+    "answer": "A key limitation of Process Reward Models (PRMs) is that they remain difficult to scale because they require extensive human annotation or rely on trained verifiers. Additionally, automatically synthesized data for these models often results in inferior performance, whereas GRAIL avoids this overhead by using intrinsic gradients."
+  },
+  {
+    "id": 124,
+    "arxiv_id": "2606.04903",
+    "title": "ial problem domains that require linear auditability. Using the typed lambda calculus, we",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Which two specific problem domains are explored in the paper, and what shared structural property do they exhibit when run on the Microservices Architecture?",
+    "answer": "The paper considers health care compliance and security vulnerability disclosure as the two problem domains. These domains share a common underlying structure where they admit Write Skew executions if run on the Microservices Architecture."
+  },
+  {
+    "id": 125,
+    "arxiv_id": "2606.04903",
+    "title": "ial problem domains that require linear auditability. Using the typed lambda calculus, we",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the definition of a 'coordination-requiring' invariant set in the context of the provided methods?",
+    "answer": "An invariant set is coordination-requiring if there exists a state that satisfies the invariants where two independent actions can both individually preserve the invariants, but their joint composition results in a state that violates them. This is considered the footprint-based counterpart to the failure of I-confluence, meaning no coordination-free execution can be guaranteed to preserve the invariants."
+  },
+  {
+    "id": 126,
+    "arxiv_id": "2606.04903",
+    "title": "ial problem domains that require linear auditability. Using the typed lambda calculus, we",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "According to the provided results, what specific process occurs during the 'E-Coordinate' reduction rule?",
+    "answer": "During the E-Coordinate reduction, the function pi-Agentic Redux selects a role r from Roles D and returns an action a produced by the agent alpha r. This process results in the term (r, a), which is typed as Roles D x Action D. The framework state remains unchanged during this operation."
+  },
+  {
+    "id": 127,
+    "arxiv_id": "2606.04906",
+    "title": "’Your AI Text is not Mine’: Redefining and Evaluating AI-generated Text",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the three possible origin labels used in the definition of text genesis?",
+    "answer": "The genesis of a text is defined by an assignment of labels from the set Y_gen. These three labels are 'H' for human, 'AI' for artificial intelligence, and 'MX' for human-AI-mixed, which accounts for instances like AI-corrected human-originated text."
+  },
+  {
+    "id": 128,
+    "arxiv_id": "2606.04906",
+    "title": "’Your AI Text is not Mine’: Redefining and Evaluating AI-generated Text",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What does the research conclude regarding the performance of detectors across different datasets and notions?",
+    "answer": "The authors empirically found that there is no single detector that consistently outperforms all others across different datasets and notions. This finding highlights the necessity of being aware of these specific notions when creating both datasets and detectors."
+  },
+  {
+    "id": 129,
+    "arxiv_id": "2606.04906",
+    "title": "’Your AI Text is not Mine’: Redefining and Evaluating AI-generated Text",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "During the LLM-powered writing task, what are the two types of interactions available to participants, and how are they triggered?",
+    "answer": "Participants have access to revision and continuation interactions. These are triggered using the shortcut CTRL+Q: selecting text before using the shortcut initiates a revision query, while placing the cursor at a specific position without selecting text initiates a continuation query."
+  },
+  {
+    "id": 130,
+    "arxiv_id": "2606.04909",
+    "title": "BEATS: Bootstrapping E-commerce Attribute Taxonomies for",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the specific quality concerns identified in the introduction regarding the use of LLMs for automated taxonomy construction?",
+    "answer": "The introduction notes that individual LLMs can exhibit inherent biases. Additionally, it highlights that single-pass generation using LLMs often leads to the production of inconsistent or hallucinated attributes."
+  },
+  {
+    "id": 131,
+    "arxiv_id": "2606.04909",
+    "title": "BEATS: Bootstrapping E-commerce Attribute Taxonomies for",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the 'Human Annotation' stage of the BEATS framework handle disagreements among annotators, and what are the possible labels for an attribute?",
+    "answer": "Domain-expert staff label attributes as 'Accept', 'Unsure', or 'Reject'. Attributes are judged independently by multiple annotators using a majority vote, and the small fraction of attributes that result in a 1-1-1 split are conservatively treated as 'Unsure'."
+  },
+  {
+    "id": 132,
+    "arxiv_id": "2606.04909",
+    "title": "BEATS: Bootstrapping E-commerce Attribute Taxonomies for",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the scale of the BEATS deployment at Rakuten Taiwan in terms of categories, attributes, and products?",
+    "answer": "BEATS was deployed at Rakuten Taiwan across 9 major categories. This implementation resulted in 67K attributes and over 5.4 million tagged products."
+  },
+  {
+    "id": 133,
+    "arxiv_id": "2606.04911",
+    "title": "Yang Liu∗1,Jiajin Zhang∗1,3,Danyang Tu∗†1,3,Yaojun Hu2,Jiao Qu4,Jiuyu Zhang5,Yu Shi5,Wei Fang∗1,3,",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the specific clinical requirements for evaluating breast oncology AI models according to the introduction?",
+    "answer": "The paper states that clinically meaningful evaluation in breast oncology requires benchmarks organized around four specific dimensions: anatomy, modality, reporting convention, and treatment workflow. BreastGPT aims to address the challenge of workflow-aware reasoning that spans across screening, diagnosis, pathology, and treatment, rather than focusing solely on medical image perception."
+  },
+  {
+    "id": 134,
+    "arxiv_id": "2606.04911",
+    "title": "Yang Liu∗1,Jiajin Zhang∗1,3,Danyang Tu∗†1,3,Yaojun Hu2,Jiao Qu4,Jiuyu Zhang5,Yu Shi5,Wei Fang∗1,3,",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the composition and annotation process of the BUS-CoT dataset used for Breast Ultrasound (BUS) data?",
+    "answer": "BUS-CoT contains 11,439 images of 10,019 lesions from 4,838 patients across 18 different ultrasound device types, covering all 99 WHO histopathology categories. Each case is annotated via a five-level protocol involving observation, features, diagnosis (BI-RADS score), pathology, and chain-of-thought reasoning. This process is performed by six senior radiologists with 8–26 years of clinical experience."
+  },
+  {
+    "id": 135,
+    "arxiv_id": "2606.04911",
+    "title": "Yang Liu∗1,Jiajin Zhang∗1,3,Danyang Tu∗†1,3,Yaojun Hu2,Jiao Qu4,Jiuyu Zhang5,Yu Shi5,Wei Fang∗1,3,",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How are the baseline models configured for evaluation in the BreastGPT study?",
+    "answer": "All baseline models are evaluated zero-shot using the same instruction-formatted prompts as BreastGPT. Proprietary models utilize official APIs set to a temperature of 0 and a maximum of 512 tokens, while open-source models use Hugging Face Transformers with greedy decoding. All models receive the same ordered visual inputs and textual task context after appropriate image preprocessing."
+  },
+  {
+    "id": 136,
+    "arxiv_id": "2606.04915",
+    "title": "Caliper: Probing Lexical Anchors versus Causal Structure in LLMs",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What does the provided text identify as the potential driver of benchmark performance, and how does this relate to the model's behavior on nonsensical subsets?",
+    "answer": "The text identifies surface lexical content as the mediator of benchmark performance. This is supported by the observation that model performance vanishes when evaluated on the pre-existing nonsensical subset of the data."
+  },
+  {
+    "id": 137,
+    "arxiv_id": "2606.04915",
+    "title": "Caliper: Probing Lexical Anchors versus Causal Structure in LLMs",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the cross-benchmark replication results, how does the lexical-fragility effect manifest across local and frontier models regarding the performance gap?",
+    "answer": "The lexical-fragility effect is not a small-model artifact and persists across both local and frontier models. The mean performance gap (accuracy loss when lexical anchors are removed) is 27.0 pp for CRASS and 11.1 pp for e-CARE among local models, while for frontier models, the mean gap increases to 29.6 pp for CRASS and 18.0 pp for e-CARE."
+  },
+  {
+    "id": 138,
+    "arxiv_id": "2606.04915",
+    "title": "Caliper: Probing Lexical Anchors versus Causal Structure in LLMs",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the provided example involving 'drug treatment' and 'having a sister', how does lexical anonymization affect the model's prediction confidence and accuracy?",
+    "answer": "Before lexical anonymization, the P0 prediction is correct with a high confidence level of at least 0.99. After the lexical content is anonymized, the model's confidence collapses to roughly 0.55 and the predicted answer flips."
+  },
+  {
+    "id": 139,
+    "arxiv_id": "2606.04922",
+    "title": "Geometry-Aware Distillation for Prompt Tuning Biomedical",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does the method proposed in the paper differ from other existing adaptation methods that model inter-class structure?",
+    "answer": "While other methods learn additional graph or adaptation modules or apply similarity-preserving prompt regularization, this work uses a different approach. The authors construct a fixed text-derived class graph to shape teacher targets for few-shot biomedical prompt tuning instead of learning new modules."
+  },
+  {
+    "id": 140,
+    "arxiv_id": "2606.04922",
+    "title": "Geometry-Aware Distillation for Prompt Tuning Biomedical",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the provided evaluation results, how does the proposed method compare to BiomedCoOp in terms of classification accuracy across different shot counts (K)?",
+    "answer": "The proposed method consistently outperforms BiomedCoOp across all tested shot counts. Specifically, at K=1 the accuracy is 59.40% vs 57.03%, at K=4 it is 65.32% vs 63.95%, and at K=16 it reaches 73.80% compared to BiomedCoOp's 72.42%."
+  },
+  {
+    "id": 141,
+    "arxiv_id": "2606.04922",
+    "title": "Geometry-Aware Distillation for Prompt Tuning Biomedical",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What is the limitation of methods like BiomedCoOp regarding the risk-coverage curve (AURC)?",
+    "answer": "Methods like BiomedCoOp emphasize the ground-truth logit while treating all non-targets as equally incorrect. The authors find that this approach can produce overconfident mistakes, which results in an increase in the area under the risk-coverage curve (AURC)."
+  },
+  {
+    "id": 142,
+    "arxiv_id": "2606.04923",
+    "title": "Xuekang Wang1*, Zhuoyuan Hao2*, Shuo Hou3, Hao Peng1, Juanzi Li1, and Xiaozhi Wang1",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In the context of Rubric-based RL with LLM-as-a-Judge, how is the proxy reward rproxy(x, y) formally defined?",
+    "answer": "The proxy reward rproxy(x, y) is defined as the LLM-as-a-Judge score. This score is derived from a contextual-bandit view of RL post-training, where a policy is updated by a KL-regularized objective designed to maximize this expected proxy reward."
+  },
+  {
+    "id": 143,
+    "arxiv_id": "2606.04923",
+    "title": "Xuekang Wang1*, Zhuoyuan Hao2*, Shuo Hou3, Hao Peng1, Juanzi Li1, and Xiaozhi Wang1",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How do the detector's identification capabilities differ between the 'VerInstruct self-praise' and 'VerInstruct lexical' runs as the search budget increases?",
+    "answer": "In the self-praise run, the detector identifies the shortcut relatively easily as the budget increases, moving the predicted onset toward the reference interval. In contrast, the VerInstruct lexical run requires a larger search budget, as low and medium budgets cause the detector to over-delay the onset until the pattern becomes obvious in late-stage outputs."
+  },
+  {
+    "id": 144,
+    "arxiv_id": "2606.04923",
+    "title": "Xuekang Wang1*, Zhuoyuan Hao2*, Shuo Hou3, Hao Peng1, Juanzi Li1, and Xiaozhi Wang1",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How are the aggregate metrics presented in Table 6 calculated?",
+    "answer": "The aggregate metrics in Table 6 are computed based on the absolute values of signed errors over detected runs. The signed errors, represented as ∆p for the relative point error and ∆I for the distance to the reference interval, are calculated relative to the modal canonical onset. Any missing detections are counted separately from these calculations."
+  },
+  {
+    "id": 145,
+    "arxiv_id": "2606.04924",
+    "title": "♥Harvard University, USA♠IT University of Copenhagen, Denmark",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the specific documented linguistic differences between human-written language and LLM outputs according to the provided text?",
+    "answer": "LLM outputs exhibit lower lexical diversity and more positive sentiment compared to human-written language. Additionally, LLMs display distinctive lexical and stylistic patterns. Research also indicates that LLM assistance leads to increased similarity across authors and reduced lexical and content diversity in various tasks."
+  },
+  {
+    "id": 146,
+    "arxiv_id": "2606.04924",
+    "title": "♥Harvard University, USA♠IT University of Copenhagen, Denmark",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "In what specific contexts do researchers consider 'unrestricted LLM usage' to be an appropriate design choice rather than a research confound?",
+    "answer": "Unrestricted LLM usage is considered appropriate when the study explicitly requires workers to interact with or prompt LLMs. Primary contexts identified for this include research specifically focused on the use of LLMs themselves, which accounted for 26.7% of responses, and studies on human-AI interaction, which accounted for 7.5% of responses."
+  },
+  {
+    "id": 147,
+    "arxiv_id": "2606.04924",
+    "title": "♥Harvard University, USA♠IT University of Copenhagen, Denmark",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "Based on the survey workflow described in the appendix, under what specific condition is a participant asked to provide details about the detection models or tools they used?",
+    "answer": "A participant is asked to provide information about detection models or tools in question E10. This question is only shown if the respondent's answer to E9, which asks about the signs that suggested LLM use, includes the mention of \"used detection tools.\""
+  },
+  {
+    "id": 148,
+    "arxiv_id": "2606.04928",
+    "title": "Fr´ed´eric Berdoz, Luca A. Lanzend ¨orfer, Kaan Bayraktar, Roger Wattenhofer",
+    "question_number": 1,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What mathematical approach allows for the computation of influence functions in closed form, according to the intro?",
+    "answer": "Influence functions can be computed in closed form by using a Hessian-adjusted dot product between the model gradients of the training and test samples. This approach is based on the concept of influence functions from classical robust statistics, as referenced by Koh and Liang (2017)."
+  },
+  {
+    "id": 149,
+    "arxiv_id": "2606.04928",
+    "title": "Fr´ed´eric Berdoz, Luca A. Lanzend ¨orfer, Kaan Bayraktar, Roger Wattenhofer",
+    "question_number": 2,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "What are the specific parameters used by the authors to generate continuations in their experiments?",
+    "answer": "To generate continuations, the authors employ Top-50 sampling with a temperature of 1. They also apply a repetition penalty of 1.5. This experimental setup is designed to produce standalone sentences or factual statements about the given subjects."
+  },
+  {
+    "id": 150,
+    "arxiv_id": "2606.04928",
+    "title": "Fr´ed´eric Berdoz, Luca A. Lanzend ¨orfer, Kaan Bayraktar, Roger Wattenhofer",
+    "question_number": 3,
+    "context_window": "mixed (intro+methods+results)",
+    "question": "How does combining gradient ascent and descent updates affect attribution accuracy compared to using ascent alone?",
+    "answer": "While using gradient ascent alone already produces strong performance in attribution, the combination of both gradient ascent and descent leads to the highest attribution accuracy. These findings are supported by ablation studies presented in Table 2 of the paper."
+  }
+]

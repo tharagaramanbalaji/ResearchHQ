@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Test change to trigger PR evaluation gate
 """
 comment_pr_summary.py
 =====================

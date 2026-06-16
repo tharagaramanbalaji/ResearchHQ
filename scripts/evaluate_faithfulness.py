@@ -20,6 +20,12 @@ import time
 from pathlib import Path
 from unittest.mock import MagicMock
 
+# Force UTF-8 encoding for standard streams to prevent UnicodeEncodeError on Windows console
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 # Workaround for Ragas 0.4.3 ModuleNotFoundError: No module named
 # 'langchain_community.chat_models.vertexai'
 mock_module = MagicMock()
@@ -252,8 +258,103 @@ def run_evaluation(dataset: Dataset, gemini_key: str) -> dict:
     )
     return results
 
+def verify_dataset_alignment(qa_entries: list[dict], data_dir: str) -> None:
+    """
+    Verify that the source documents for the QA dataset are actually present in the indexed corpus.
+    """
+    import re
+    
+    documents_file = Path(data_dir) / "processed" / "documents.jsonl"
+    if not documents_file.exists():
+        print(f"[WARNING] Corpus documents file not found at {documents_file}. Cannot verify alignment.")
+        return
+        
+    print(f"Verifying alignment between QA dataset and corpus at {documents_file}...")
+    corpus_docs = []
+    with documents_file.open("r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                corpus_docs.append(json.loads(line))
+                
+    # Extract identifiers from corpus documents
+    # A corpus document might be a PDF (with pdf_path containing arxiv ID) or have a title containing it.
+    corpus_identifiers = set()
+    for doc in corpus_docs:
+        # Check pdf_path
+        pdf_path = doc.get("pdf_path") or ""
+        # Match arxiv patterns in path, e.g., arxiv_2606.04691v1.pdf
+        arxiv_match = re.search(r"arxiv_(\d+\.\d+)", pdf_path)
+        if arxiv_match:
+            corpus_identifiers.add(arxiv_match.group(1))
+        
+        # Check document_id or path
+        path = doc.get("path") or ""
+        arxiv_match = re.search(r"arxiv_(\d+\.\d+)", path)
+        if arxiv_match:
+            corpus_identifiers.add(arxiv_match.group(1))
+            
+        doc_id = doc.get("document_id") or ""
+        arxiv_match = re.search(r"(\d+\.\d+)", doc_id)
+        if arxiv_match:
+            corpus_identifiers.add(arxiv_match.group(1))
+            
+    # Check alignment for each QA entry
+    matched_count = 0
+    mismatched_arxiv_ids = set()
+    for entry in qa_entries:
+        arxiv_id = entry.get("arxiv_id")
+        if not arxiv_id:
+            # If there's no arxiv_id, we can fall back to matching title/url if available
+            continue
+            
+        # Standardize arxiv_id (e.g. remove versions if any)
+        clean_arxiv_id = arxiv_id.strip()
+        
+        # Check if the clean_arxiv_id exists in any of our corpus identifiers
+        is_matched = False
+        if clean_arxiv_id in corpus_identifiers:
+            is_matched = True
+        else:
+            # Fallback direct substring match
+            for doc in corpus_docs:
+                title = doc.get("title") or ""
+                path = doc.get("path") or ""
+                pdf_path = doc.get("pdf_path") or ""
+                url = doc.get("url") or ""
+                if (clean_arxiv_id in title or 
+                    clean_arxiv_id in path or 
+                    clean_arxiv_id in pdf_path or 
+                    clean_arxiv_id in url):
+                    is_matched = True
+                    break
+                    
+        if is_matched:
+            matched_count += 1
+        else:
+            mismatched_arxiv_ids.add(clean_arxiv_id)
+            
+    total_with_id = sum(1 for entry in qa_entries if entry.get("arxiv_id"))
+    if total_with_id == 0:
+        print("No arXiv IDs found in the QA dataset. Skipping alignment check.")
+        return
+        
+    print(f"Alignment check: {matched_count}/{total_with_id} QA entries matched with corpus documents.")
+    if matched_count == 0:
+        print("\n" + "!" * 80)
+        print("CRITICAL MISMATCH DETECTED:")
+        print(f"The QA dataset is referencing arXiv papers, but the indexed corpus at {data_dir}")
+        print("contains entirely different documents (e.g. web pages).")
+        print("All queries will fail retrieval or be declined by the model's grounding rules.")
+        print(f"Mismatched arXiv IDs in QA dataset: {sorted(list(mismatched_arxiv_ids))}")
+        print("!" * 80 + "\n")
+        raise SystemExit("Fatal: QA dataset is mismatched with the indexed corpus. Please check your data seeding / indexing steps.")
+    elif matched_count < total_with_id:
+        print(f"[WARNING] Some QA entries ({total_with_id - matched_count}) do not have corresponding documents in the index.")
+        print(f"Missing arXiv IDs: {sorted(list(mismatched_arxiv_ids))}")
+
 
 def main() -> None:
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=0, help="Evaluate only first N questions (0 = all)")
     parser.add_argument(
@@ -295,6 +396,8 @@ def main() -> None:
     with qa_json.open("r", encoding="utf-8") as handle:
         qa_entries = json.load(handle)
     print(f"Loaded {len(qa_entries)} Q&A pairs from {qa_json}")
+
+    verify_dataset_alignment(qa_entries, RAG_SETTINGS["data_dir"])
 
     dataset, dataset_stats = build_ragas_dataset(
         qa_entries,

@@ -3,5 +3,25 @@ venv/
 __pycache__/
 *.pyc
 
-data/
+# Ignore large generated data by default
+data/*
+
+# Allow the subdirectories we want to go into
+!data/evaluation/
+!data/llm_ai_2023_2026/
+
+# Within those directories, ignore everything by default
+data/evaluation/*
+data/llm_ai_2023_2026/*
+
+# But allow the specific files and subdirectories
+!data/evaluation/qa_dataset.json
+!data/llm_ai_2023_2026/raw/
+data/llm_ai_2023_2026/raw/*
+!data/llm_ai_2023_2026/raw/web_urls_enterprise.txt
+!data/llm_ai_2023_2026/processed/
+data/llm_ai_2023_2026/processed/*
+!data/llm_ai_2023_2026/processed/documents.jsonl
+!data/llm_ai_2023_2026/processed/chunks.jsonl
+
 

@@ -29,6 +29,58 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Prepare Random Smoke Dataset
+        run: |
+          python -c "
+          import json
+          import random
+          from pathlib import Path
+          
+          # Load all QA pairs
+          qa_path = Path('data/evaluation/qa_dataset.json')
+          with qa_path.open('r', encoding='utf-8') as f:
+              qa = json.load(f)
+              
+          # Randomly sample 15 questions
+          random.seed()
+          sampled_qa = random.sample(qa, 15)
+          
+          # Write the sampled questions to a temporary file
+          temp_qa_path = Path('data/evaluation/qa_smoke_dataset.json')
+          with temp_qa_path.open('w', encoding='utf-8') as f:
+              json.dump(sampled_qa, f, indent=2, ensure_ascii=False)
+              
+          # Find the target papers for the sampled questions
+          target_arxivs = {item['arxiv_id'] for item in sampled_qa if item.get('arxiv_id')}
+          
+          # Filter documents.jsonl in-place
+          docs_path = Path('data/llm_ai_2023_2026/processed/documents.jsonl')
+          filtered_docs = []
+          with docs_path.open('r', encoding='utf-8') as f:
+              for line in f:
+                  doc = json.loads(line)
+                  if any(arxiv in doc['document_id'] or arxiv in doc.get('pdf_path', '') for arxiv in target_arxivs):
+                      filtered_docs.append(doc)
+          with docs_path.open('w', encoding='utf-8') as f:
+              for doc in filtered_docs:
+                  f.write(json.dumps(doc, ensure_ascii=False) + '\n')
+                  
+          # Filter chunks.jsonl in-place
+          chunks_path = Path('data/llm_ai_2023_2026/processed/chunks.jsonl')
+          filtered_chunks = []
+          with chunks_path.open('r', encoding='utf-8') as f:
+              for line in f:
+                  chunk = json.loads(line)
+                  if any(arxiv in chunk['chunk_id'] or arxiv in chunk.get('document_id', '') for arxiv in target_arxivs):
+                      filtered_chunks.append(chunk)
+          with chunks_path.open('w', encoding='utf-8') as f:
+              for chunk in filtered_chunks:
+                  f.write(json.dumps(chunk, ensure_ascii=False) + '\n')
+                  
+          print(f'Randomly sampled 15 questions referencing {len(target_arxivs)} papers.')
+          print(f'Filtered corpus to {len(filtered_docs)} documents and {len(filtered_chunks)} chunks.')
+          "
+
       - name: Index ChromaDB
         run: |
           python scripts/corpus/index_chroma.py --data-dir data/llm_ai_2023_2026
@@ -38,17 +90,22 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python scripts/run_eval_ci.py \
-            --limit 15 \
+            --dataset-path data/evaluation/qa_smoke_dataset.json \
             --min-evaluated 10 \
             --min-faithfulness 0.80 \
             --min-answer-relevancy 0.75
 
+      # Only comment if ragas_summary.json was actually written (eval ran successfully)
       - name: Comment Results on Pull Request
         if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/comment_pr_summary.py
+          if [ -f "data/evaluation/ragas_summary.json" ]; then
+            python scripts/comment_pr_summary.py
+          else
+            echo "Skipping PR comment — ragas_summary.json not found (eval did not complete)."
+          fi
 
       - name: Upload Evaluation Artifacts
         if: always()
